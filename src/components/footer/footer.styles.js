@@ -68,16 +68,16 @@ export const BottomFooter = styled.div`
   order: 1;
 
   @media (max-width: 600px) {
-    font-size: 12px;
+    font-size: 0.6rem;
   }
 
   @media (max-width: 959px) {
     text-align: center;
-    font-size: 0.7rem;
+    font-size: 0.75rem;
   }
   @media (min-width: 960px) {
     text-align: left;
     width: 50%;
-    font-size: 13.5px;
+    font-size: 0.85rem;
   }
 `

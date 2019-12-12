@@ -16,7 +16,7 @@ export const Main = styled.main`
     max-width: 100%;
     width: 960px;
     column-gap: 2rem;
-    margin: 0 auto 1rem;
+    margin: 0 auto 3rem;
     font-size: 18px;
   }
 `

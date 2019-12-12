@@ -13,15 +13,16 @@ export const HeaderWrapper = styled.header`
   right: 0px;
   top: 0px;
   z-index: 1000;
+  line-height: 1.45;
+  z-index: 1000;
 
   nav {
     background-color: ${background_white};
-    width: 100%;
-    height: 100%;
     display: flex;
-    align-items: center;
+    position: relative;
     justify-content: flex-start;
-    z-index: 1000;
+    z-index: 5;
+    -webkit-box-pack: start;
   }
 
   @media (max-width: 959px) {
@@ -55,14 +56,20 @@ export const HeaderWrapper = styled.header`
 export const NavItem = styled(Link)`
   font-family: ${font_family_heading_black};
   font-size: 18px;
+  font-weight: 900;
   color: ${dark_green};
-  line-height: 22.5px;
+  line-height: 1.25rem;
   margin: 0;
   padding: 0.4rem 0.7rem;
   text-transform: uppercase;
   transition: all 250ms linear 0s;
   text-decoration: none;
   cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  text-decoration: none;
+  text-decoration-line: none;
+  text-decoration-style: initial;
+  text-decoration-color: initial;
 
   &:first-child {
     width: 42px;

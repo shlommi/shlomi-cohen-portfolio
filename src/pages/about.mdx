@@ -1,0 +1,23 @@
+import { graphql } from "gatsby"
+import Img from "gatsby-image"
+import Heading from "../components/heading"
+import Image from "../components/Image"
+
+export const pageQuery = graphql`
+  query {
+    file(relativePath: { eq: "shlomi-cohen.png" }) {
+      childImageSharp {
+        # Specify a fluid image and fragment
+        # The default maxWidth is 800 pixels
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
+
+<Heading text="About" />
+<Image>
+  <Img fluid={props.data.file.childImageSharp.fluid} />
+</Image>
