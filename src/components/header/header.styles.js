@@ -8,6 +8,9 @@ import {
 } from "../../theme/_variables"
 
 export const HeaderWrapper = styled.header`
+  .current-page {
+    color: ${green};
+  }
   left: 0px;
   position: fixed;
   right: 0px;
@@ -55,12 +58,13 @@ export const HeaderWrapper = styled.header`
 
 export const NavItem = styled(Link)`
   font-family: ${font_family_heading_black};
-  font-size: 18px;
-  font-weight: 900;
   color: ${dark_green};
   line-height: 1.25rem;
   margin: 0;
-  padding: 0.4rem 0.7rem;
+  padding-top: calc(0.5rem - 1px);
+  padding-right: 0.8rem;
+  padding-bottom: calc(0.5rem - 1px);
+  padding-left: 0.8rem;
   text-transform: uppercase;
   transition: all 250ms linear 0s;
   text-decoration: none;
@@ -70,6 +74,12 @@ export const NavItem = styled(Link)`
   text-decoration-line: none;
   text-decoration-style: initial;
   text-decoration-color: initial;
+  font-weight: 900;
+  font-size: 1.25rem;
+
+  @media (max-width: 480px) {
+    font-size: 1rem;
+  }
 
   &:first-child {
     width: 42px;
@@ -89,8 +99,10 @@ export const NavItem = styled(Link)`
   }
 
   @media (max-width: 959px) {
-    font-size: 14px;
-    padding: 0.3rem 0.6rem;
+    padding-top: calc(0.5rem - 1.2px);
+    padding-right: 0.3rem;
+    padding-bottom: calc(0.5rem - 1.2px);
+    padding-left: 0.3rem;
 
     &:first-child {
       margin: 0px 0.2rem 0px 0px;

@@ -5,18 +5,17 @@ import linkedin from "../images/linkedin-fill.svg"
 import facebook from "../images/facebook-fill.svg"
 import styled from "styled-components"
 import { font_family_heading_black } from "../theme/_variables"
-import { Flex } from "../theme/grid"
 
 import Button from "../components/button"
 
 const TitleHeader = () => {
   return (
-    <TitleWrapper justify="center" align="center">
+    <TitleWrapper>
       <NameWarpper>
         <h1>Shlomi Cohen</h1>
         <h2>Frontend Developer</h2>
       </NameWarpper>
-      <IconsWrapper justify="center" align="center">
+      <IconsWrapper>
         <img src={whatsapp} alt="whatsapp" />
         <img src={github} alt="github" />
         <img src={linkedin} alt="linkedin" />
@@ -29,29 +28,28 @@ const TitleHeader = () => {
 
 export default TitleHeader
 
-const TitleWrapper = styled(Flex)`
+const TitleWrapper = styled.div`
   @media (max-width: 959px) {
+    display: flex;
     text-align: center;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    margin-top: 0;
-
+    margin: 0 auto;
     h1 {
       font-family: ${font_family_heading_black};
       font-size: 20px;
+      text-align: center;
     }
   }
 
   @media (min-width: 960px) {
-    grid-column: 3 / span 2;
+    display: flex;
     text-align: center;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0;
-    min-height: 85vh;
-    padding-bottom: 2rem;
+    margin: 0 auto 1.5rem auto;
   }
 
   h1 {
@@ -64,7 +62,10 @@ const TitleWrapper = styled(Flex)`
   }
 `
 
-const IconsWrapper = styled(Flex)`
+const IconsWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   max-width: 400px;
   margin-top: 0.75rem;

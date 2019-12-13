@@ -8,8 +8,8 @@ const HelloWorldImage = () => {
     query {
       file(relativePath: { eq: "hello-world.png" }) {
         childImageSharp {
-          fixed(width: 400, height: 500, quality: 90) {
-            ...GatsbyImageSharpFixed
+          fluid {
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -17,7 +17,11 @@ const HelloWorldImage = () => {
   `)
   return (
     <ImageWrapper>
-      <Img fixed={data.file.childImageSharp.fixed} alt="hello-world" />
+      <Img
+        fadeIn="false"
+        fluid={data.file.childImageSharp.fluid}
+        alt="hello-world"
+      />
     </ImageWrapper>
   )
 }
@@ -25,31 +29,17 @@ const HelloWorldImage = () => {
 export default HelloWorldImage
 
 const ImageWrapper = styled.div`
-  @media (max-width: 600px) {
-    margin: 0;
+  display: block;
+  max-width: 400px;
+  max-height: 500px;
+  @media (max-width: 599px) {
+    margin: 0 auto 2rem auto;
   }
-  @media (max-width: 959px) {
-    img {
-      margin: 0 auto;
-      object-fit: contain !important;
-    }
-    display: flex;
-    width: 100%;
+  @media (min-width: 600px) {
+    /* -webkit-box-align: center;
     justify-content: center;
-    align-items: center;
-    margin: 0 auto 1.5rem auto;
-  }
-  @media (min-width: 960px) {
-    grid-column: span 2;
-    grid-column-end: auto;
-    display: flex;
-    -webkit-box-align: center;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    padding-bottom: 2rem;
-    img {
-      margin: 0;
-    }
+    align-items: center; */
+    text-align: center;
+    margin: 4rem auto 1rem auto;
   }
 `

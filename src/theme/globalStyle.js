@@ -11,7 +11,6 @@ const GlobalStyle = createGlobalStyle`
             margin: 0;
           }
         
-      
           body {
             background-color:${background_white};
             color: #133030;
@@ -23,12 +22,7 @@ const GlobalStyle = createGlobalStyle`
             min-height: 100vh;
             box-sizing: border-box;
           }
-
-         
-
-          * + * {
-              margin-top: 1.5rem;
-          }
+        
           h1,
           h2,
           h3,

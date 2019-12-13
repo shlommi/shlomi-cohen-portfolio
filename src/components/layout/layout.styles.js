@@ -1,22 +1,15 @@
 import styled from "styled-components"
 
 export const Main = styled.main`
+  display: block;
+  max-width: 57ch;
   @media (max-width: 959px) {
-    display: block;
-    max-width: 57ch;
-    margin: 2rem auto 4rem;
     font-size: 16px;
+    margin: 4rem auto 4rem auto;
   }
 
   @media (min-width: 960px) {
-    display: grid;
-    grid-auto-flow: column;
-    grid-column-gap: 2rem;
-    grid-template: repeat(2, auto) / 1fr 1fr;
-    max-width: 100%;
-    width: 960px;
-    column-gap: 2rem;
-    margin: 0 auto 3rem;
+    margin: 0rem auto 1rem auto;
     font-size: 18px;
   }
 `

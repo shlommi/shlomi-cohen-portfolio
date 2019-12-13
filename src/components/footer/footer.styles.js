@@ -7,11 +7,12 @@ export const FooterWrapper = styled.footer`
   max-width: 57ch;
   margin: 0 auto;
   margin-top: 1rem;
-  padding-bottom: 2rem;
+  padding-bottom: 1.8rem;
 
   @media (max-width: 959px) {
     flex-direction: column;
     justify-content: space-evenly;
+    padding-bottom: 1rem;
   }
   @media (min-width: 960px) {
     max-width: 100%;

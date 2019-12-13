@@ -39,4 +39,8 @@ const ButtonWrapper = styled.button`
     background-color: ${dark_green};
     outline: none;
   }
+
+  @media (min-width: 960px) {
+    margin-bottom: 2rem;
+  }
 `
