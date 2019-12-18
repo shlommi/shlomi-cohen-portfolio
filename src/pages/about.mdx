@@ -10,21 +10,21 @@ export const pageQuery = graphql`
   {
     whatIDo: file(relativePath: { eq: "what-i-do.png" }) {
       childImageSharp {
-        fixed(width: 288) {
+        fixed(width: 288, quality: 100) {
           ...GatsbyImageSharpFixed
         }
       }
     }
     skills: file(relativePath: { eq: "my-skills.png" }) {
       childImageSharp {
-        fixed {
+        fixed(quality: 100) {
           ...GatsbyImageSharpFixed
         }
       }
     }
     forFun: file(relativePath: { eq: "what-i-do-for-fun.png" }) {
       childImageSharp {
-        fixed {
+        fixed(quality: 100) {
           ...GatsbyImageSharpFixed
         }
       }
