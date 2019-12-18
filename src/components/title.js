@@ -4,7 +4,7 @@ import github from "../images/github-fill.svg"
 import linkedin from "../images/linkedin-fill.svg"
 import facebook from "../images/facebook-fill.svg"
 import styled from "styled-components"
-import { font_family_heading_black } from "../theme/_variables"
+import { font_black } from "../theme/_variables"
 
 import Button from "../components/button"
 
@@ -37,7 +37,7 @@ const TitleWrapper = styled.div`
     align-items: center;
     margin: 0 auto;
     h1 {
-      font-family: ${font_family_heading_black};
+      font-family: ${font_black};
       font-size: 20px;
       text-align: center;
     }
@@ -53,7 +53,7 @@ const TitleWrapper = styled.div`
   }
 
   h1 {
-    font-family: ${font_family_heading_black};
+    font-family: ${font_black};
     font-size: 40px;
   }
 

@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
 import {
-  font_family_heading_black,
+  font_black,
   background_white,
   green,
   dark_green,
@@ -34,8 +34,8 @@ export const HeaderWrapper = styled.header`
       display: block;
       position: absolute;
       background-color: ${green};
-      right: 0px;
-      top: 33px;
+      right: -15px;
+      top: 34px;
       height: 1px;
       width: calc(100% - 15px);
       z-index: 1;
@@ -57,7 +57,8 @@ export const HeaderWrapper = styled.header`
 `
 
 export const NavItem = styled(Link)`
-  font-family: ${font_family_heading_black};
+  font-family: ${font_black};
+  font-weight: 900;
   color: ${dark_green};
   line-height: 1.25rem;
   margin: 0;
@@ -74,23 +75,21 @@ export const NavItem = styled(Link)`
   text-decoration-line: none;
   text-decoration-style: initial;
   text-decoration-color: initial;
-  font-weight: 900;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
 
   @media (max-width: 480px) {
     font-size: 1rem;
   }
 
   &:first-child {
-    width: 42px;
-    height: 33px;
+    width: 48px;
     z-index: 10;
     margin: 0px 0.75rem 0px 0px;
 
     img {
       position: absolute;
-      top: 0;
-      left: 0;
+      top: -5px;
+      left: -7px;
     }
   }
 
@@ -106,6 +105,22 @@ export const NavItem = styled(Link)`
 
     &:first-child {
       margin: 0px 0.2rem 0px 0px;
+      img {
+        position: absolute;
+        top: -8px;
+        left: -8px;
+      }
+    }
+  }
+
+  @media (min-width: 960px) {
+    &:first-child {
+      margin: 0px 0.2rem 0px 0px;
+      img {
+        position: absolute;
+        top: -8px;
+        left: -8px;
+      }
     }
   }
 `

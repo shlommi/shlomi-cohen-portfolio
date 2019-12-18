@@ -6,6 +6,7 @@ import {
   FooterNavItem,
   BottomFooter,
 } from "./footer.styles"
+import logo from "../../images/logo-footer.svg"
 
 function Footer() {
   return (
@@ -20,7 +21,11 @@ function Footer() {
           <FooterNavItem to="/contact">Contact</FooterNavItem>
         </FooterNav>
         <BottomFooter>
-          All content © Shlomi Cohen {new Date().getFullYear()}
+          All content ©{" "}
+          <span>
+            <img src={logo} width="10" alt="logo" />
+          </span>
+          Shlomi Cohen {new Date().getFullYear()}
         </BottomFooter>
       </FooterWrapper>
     </>

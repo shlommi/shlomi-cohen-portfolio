@@ -1,35 +1,90 @@
 import Heading from "../components/heading"
 import Subheading from "../components/subheading"
 import AboutImage from "../components/about-image"
+import ImageWrapper from "../components/image-wrapper"
 
-<Heading text="About" />
+import { graphql } from "gatsby"
+import Img from "gatsby-image"
+
+export const pageQuery = graphql`
+  {
+    whatIDo: file(relativePath: { eq: "what-i-do.png" }) {
+      childImageSharp {
+        fixed {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    skills: file(relativePath: { eq: "my-skills.png" }) {
+      childImageSharp {
+        fixed {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    forFun: file(relativePath: { eq: "what-i-do-for-fun.png" }) {
+      childImageSharp {
+        fixed {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+  }
+`
+
+# About
+
 <AboutImage />
+<Heading text="I'm Shlomi Cohen." />
+<Subheading text="fed developer · technology addict · occasional designer · father and husband" />
+<ImageWrapper>
+  <Img fixed={props.data.whatIDo.childImageSharp.fixed} />
+</ImageWrapper>
 
-# I'm Shlomi Cohen.
+## What I do
 
-## fed devloper · technology addict · occasional designer · father and husband
+I’m a self-taught programmer, that set a goal to become a frontend developer.
+I started this journey in 2017 while I am the father of my three children and
+working full time in a non-programming job. I have built several react web
+apps for small business, looking at a design I can convert it into an HTML CSS
+template with pixel-perfect precision. I always use GIT to track my progress
+and files, as well as to collaborate with other developers.
 
-laskjdfaslijhdfsaio sdoifhjdsiopfghjdsklfghkls sdlkfghsadl;kghdskl;g
-laskjdfaslijhdfsaio sdoifhjdsiopfghjdsklfghkls sdlkfghsadl;kghdskl;g
-laskjdfaslijhdfsaio sdoifhjdsiopfghjdsklfghkls sdlkfghsadl;kghdskl;g
-laskjdfaslijhdfsaio sdoifhjdsiopfghjdsklfghkls sdlkfghsadl;kghdskl;g
-laskjdfaslijhdfsaio sdoifhjdsiopfghjdsklfghkls sdlkfghsadl;kghdskl;g
-laskjdfaslijhdfsaio sdoifhjdsiopfghjdsklfghkls sdlkfghsadl;kghdskl;g
-laskjdfaslijhdfsaio sdoifhjdsiopfghjdsklfghkls sdlkfghsadl;kghdskl;g
-laskjdfaslijhdfsaio sdoifhjdsiopfghjdsklfghkls sdlkfghsadl;kghdskl;g
-laskjdfaslijhdfsaio sdoifhjdsiopfghjdsklfghkls sdlkfghsadl;kghdskl;g
-laskjdfaslijhdfsaio sdoifhjdsiopfghjdsklfghkls sdlkfghsadl;kghdskl;g
-laskjdfaslijhdfsaio sdoifhjdsiopfghjdsklfghkls sdlkfghsadl;kghdskl;g
-laskjdfaslijhdfsaio sdoifhjdsiopfghjdsklfghkls sdlkfghsadl;kghdskl;g
-laskjdfaslijhdfsaio sdoifhjdsiopfghjdsklfghkls sdlkfghsadl;kghdskl;g
-laskjdfaslijhdfsaio sdoifhjdsiopfghjdsklfghkls sdlkfghsadl;kghdskl;g
-laskjdfaslijhdfsaio sdoifhjdsiopfghjdsklfghkls sdlkfghsadl;kghdskl;g
-laskjdfaslijhdfsaio sdoifhjdsiopfghjdsklfghkls sdlkfghsadl;kghdskl;g
-laskjdfaslijhdfsaio sdoifhjdsiopfghjdsklfghkls sdlkfghsadl;kghdskl;g
-laskjdfaslijhdfsaio sdoifhjdsiopfghjdsklfghkls sdlkfghsadl;kghdskl;g
-laskjdfaslijhdfsaio sdoifhjdsiopfghjdsklfghkls sdlkfghsadl;kghdskl;g
-laskjdfaslijhdfsaio sdoifhjdsiopfghjdsklfghkls sdlkfghsadl;kghdskl;g
-laskjdfaslijhdfsaio sdoifhjdsiopfghjdsklfghkls sdlkfghsadl;kghdskl;g
-laskjdfaslijhdfsaio sdoifhjdsiopfghjdsklfghkls sdlkfghsadl;kghdskl;g
-laskjdfaslijhdfsaio sdoifhjdsiopfghjdsklfghkls sdlkfghsadl;kghdskl;g
-laskjdfaslijhdfsaio sdoifhjdsiopfghjdsklfghkls sdlkfghsadl;kghdskl;g
+Currently, I keep learning and building things in Javascript and React
+technologies. I’m looking for a position where I can progress and challenge my
+skills. I l ive in Beer Yaakov, Israel.
+
+<ImageWrapper>
+  <Img fixed={props.data.skills.childImageSharp.fixed} />
+</ImageWrapper>
+
+## My skills
+
+<ul>
+  <li>HTML / CSS / Javascript</li>
+  <li>React</li>
+  <li>Redux</li>
+  <li>GraphQL</li>
+  <li>Angular</li>
+  <li>Express </li>
+  <li>Node.js </li>
+  <li>Bootstrap </li>
+  <li>MongoDB </li>
+  <li>Git </li>
+  <li>Gatsby </li>
+  <li>REST API </li>
+  <li>Next.js </li>
+</ul>
+<ImageWrapper>
+  <Img fixed={props.data.forFun.childImageSharp.fixed} />
+</ImageWrapper>
+
+## What I do for fun
+
+- Travel . on Saturday's with my family in our beautiful country.
+
+- I like photography and always take a camera with me to picture landscapes views, portraits of my kids and nature.
+
+- cook. I love figuring out new recipes to create tasty meals for my family.
+
+- Digital music. it's my favorite music and I like to listen to all the genres of it. https://www.di.fm/

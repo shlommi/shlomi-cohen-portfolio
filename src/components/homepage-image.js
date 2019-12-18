@@ -8,7 +8,7 @@ const HelloWorldImage = () => {
     query {
       file(relativePath: { eq: "hello-world.png" }) {
         childImageSharp {
-          fluid {
+          fluid(maxHeight: 500, maxWidth: 400, quality: 80) {
             ...GatsbyImageSharpFluid
           }
         }

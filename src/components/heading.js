@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { font_family_heading_black } from "../theme/_variables"
+import { font_black } from "../theme/_variables"
 
 const Heading = ({ text }) => {
   return <H1>{text}</H1>
@@ -8,10 +8,10 @@ const Heading = ({ text }) => {
 
 export default Heading
 const H1 = styled.h1`
-  width: 100%;
-  margin-top: 5rem;
-  line-height: 1.1;
-  font-family: ${font_family_heading_black};
-  font-size: ${({ fontSize }) => fontSize};
-  text-align: ${({ align }) => align};
+  font-size: 155%;
+  font-weight: 900;
+  line-height: 1;
+  text-align: center;
+  margin: 0.5rem 0px 0.25rem;
+  font-family: ${font_black};
 `

@@ -8,8 +8,8 @@ const AboutImage = () => {
     query {
       file(relativePath: { eq: "shlomi-cohen.png" }) {
         childImageSharp {
-          fixed(width: 214, height: 214) {
-            ...GatsbyImageSharpFixed
+          fluid(maxHeight: 200, maxWidth: 200, quality: 80) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -19,7 +19,7 @@ const AboutImage = () => {
     <ImageWrapper>
       <Img
         fadeIn="false"
-        fixed={data.file.childImageSharp.fixed}
+        fluid={data.file.childImageSharp.fluid}
         alt="shlomi-cohen"
       />
     </ImageWrapper>
@@ -29,47 +29,16 @@ const AboutImage = () => {
 export default AboutImage
 
 const ImageWrapper = styled.div`
-  @media (max-width: 959px) {
-    margin: 5rem auto 1.5rem auto;
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    img {
-      object-fit: contain !important;
-    }
+  display: block;
+  max-width: 200px;
+  max-height: 200px;
+  @media (max-width: 599px) {
+    margin: 15vh auto 2rem auto;
+    max-width: 160px;
+    max-height: 160px;
   }
-  @media (min-width: 960px) {
-    display: flex;
-    -webkit-box-align: center;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    padding-bottom: 2rem;
-    img {
-      margin: 0;
-    }
+  @media (min-width: 600px) {
+    text-align: center;
+    margin: 8rem auto 1rem auto;
   }
 `
-
-// import React from "react"
-// import styled from "styled-components"
-
-// const Image = ({ children }) => {
-//   return <ImageWrapper>{children}</ImageWrapper>
-// }
-
-// const ImageWrapper = styled.figure`
-//   @media (max-width: 700px) {
-//     display: block;
-//     max-width: 300px;
-//     width: 300px;
-//     margin-top: 1rem;
-//   }
-//   @media (min-width: 700px) {
-//     display: block;
-//     float: right;
-//     margin-left: 30px;
-//   }
-// `
-// export default Image

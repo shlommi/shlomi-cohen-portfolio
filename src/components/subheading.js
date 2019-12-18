@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { font_family_default } from "../theme/_variables"
+import { font_regular, textColor } from "../theme/_variables"
 
 const Subheading = ({ text }) => {
   return <H2>{text}</H2>
@@ -9,10 +9,10 @@ const Subheading = ({ text }) => {
 export default Subheading
 
 const H2 = styled.h2`
-  width: 100%;
-  line-height: 1.1;
-  font-family: ${font_family_default};
-  font-size: ${({ fontSize }) => fontSize};
-  font-size: 15px;
-  text-align: ${({ align }) => align};
+  font-family: ${font_regular};
+  color: ${textColor};
+  font-size: 82%;
+  text-align: center;
+  margin-top: 0.55rem;
+  font-weight: 300;
 `

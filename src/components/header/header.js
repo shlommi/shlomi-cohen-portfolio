@@ -7,7 +7,7 @@ const Header = () => (
   <HeaderWrapper>
     <nav>
       <NavItem to="/">
-        <img src={logo} alt="logo" className="logo-header" />
+        <img src={logo} width="51" alt="logo" className="logo-header" />
       </NavItem>
       <NavItem to="/about" activeClassName="current-page">
         ABOUT

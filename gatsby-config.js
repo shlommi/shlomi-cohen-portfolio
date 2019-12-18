@@ -5,6 +5,7 @@ module.exports = {
     author: `shlomi cohen`,
   },
   plugins: [
+    `gatsby-transformer-remark`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     {
@@ -20,6 +21,14 @@ module.exports = {
         defaultLayouts: {
           default: require.resolve("./src/components/layout/layout.js"),
         },
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1200,
+            },
+          },
+        ],
       },
     },
     {
@@ -44,12 +53,12 @@ module.exports = {
         name: `Shlomi Cohen`,
         short_name: `Shlomi Cohen`,
         start_url: `/`,
-        background_color: `#2F7A79`,
+        background_color: `#ffff`,
         theme_color: `#2F7A79`,
         display: `minimal-ui`,
-        icon: `src/images/icon-logo.png`, // This path is relative to the root of the site.
+        icon: `src/images/android-chrome-192x192.png`,
       },
     },
-    `gatsby-plugin-offline`,
+    // `gatsby-plugin-offline`,
   ],
 }

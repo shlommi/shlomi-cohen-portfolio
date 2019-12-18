@@ -1,12 +1,12 @@
 @font-face {
-  font-family: "Mallory Black";
-  src: url("../fonts/Mallory\ Black.ttf");
+  font-family: "Montserrat-Light";
+  src: url("../fonts/Montserrat-Light.ttf");
 }
 @font-face {
-  font-family: "Mallory Bold";
-  src: url("../fonts/Mallory\ Bold.ttf");
+  font-family: "Montserrat-Regular";
+  src: url("../fonts/Montserrat-Regular.ttf");
 }
 @font-face {
-  font-family: "Blinker";
-  src: url("../fonts/Blinker-Regular.ttf");
+  font-family: "Montserrat-Black";
+  src: url("../fonts/Montserrat-Black.ttf");
 }

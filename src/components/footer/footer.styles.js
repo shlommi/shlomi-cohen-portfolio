@@ -25,7 +25,7 @@ export const FooterWrapper = styled.footer`
 export const Line = styled.div`
   display: block;
   max-width: 57ch;
-  margin: 0 auto;
+  margin: 5rem auto 0 auto;
   height: 1px;
   background-color: #b4e2e2;
   @media (min-width: 960px) {
@@ -68,8 +68,16 @@ export const BottomFooter = styled.div`
   margin: 0;
   order: 1;
 
+  span {
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+
   @media (max-width: 600px) {
     font-size: 0.6rem;
+    span img {
+      width: 9px;
+    }
   }
 
   @media (max-width: 959px) {
@@ -80,5 +88,9 @@ export const BottomFooter = styled.div`
     text-align: left;
     width: 50%;
     font-size: 0.85rem;
+
+    span img {
+      width: 11px;
+    }
   }
 `

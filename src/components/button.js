@@ -1,10 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import {
-  green,
-  dark_green,
-  font_family_heading_bold,
-} from "../theme/_variables"
+import { green, dark_green, font_black } from "../theme/_variables"
 
 const Button = ({ text }) => {
   return <ButtonWrapper>{text}</ButtonWrapper>
@@ -20,9 +16,8 @@ const ButtonWrapper = styled.button`
   color: #ffffff;
   cursor: pointer;
   display: block;
-  font-family: ${font_family_heading_bold};
+  font-family: ${font_black};
   font-size: 24px;
-  font-weight: 900;
   line-height: 1.5;
   margin-left: auto;
   margin-right: auto;
@@ -31,7 +26,6 @@ const ButtonWrapper = styled.button`
   max-width: 300px;
   width: 300px;
   padding: 0.125rem 0.5rem 0.125rem 0.5rem;
-  text-transform: uppercase;
   width: 100%;
   transition: background-color 150ms linear;
 
