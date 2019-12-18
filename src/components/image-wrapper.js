@@ -10,12 +10,11 @@ const ImageWrapper = ({ children }) => {
 export default ImageWrapper
 
 const Wrapper = styled.div`
+  /* text-align: center;
+  display: block; */
   display: flex;
   justify-content: center;
   align-items: center;
-  img {
-    object-fit: contain !important;
-  }
 
   @media (max-width: 599px) {
     margin: 2rem auto;

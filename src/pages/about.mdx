@@ -10,7 +10,7 @@ export const pageQuery = graphql`
   {
     whatIDo: file(relativePath: { eq: "what-i-do.png" }) {
       childImageSharp {
-        fixed {
+        fixed(width: 288) {
           ...GatsbyImageSharpFixed
         }
       }
