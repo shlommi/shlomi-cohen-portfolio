@@ -38,7 +38,7 @@ export const pageQuery = graphql`
 <Heading text="I'm Shlomi Cohen." />
 <Subheading text="fed developer · technology addict · occasional designer · father and husband" />
 <ImageWrapper>
-  <Img fluid={props.data.whatIDo.childImageSharp.fluid} />
+  <Img fadeIn={false} fluid={props.data.whatIDo.childImageSharp.fluid} />
 </ImageWrapper>
 
 ## What I do
@@ -55,7 +55,7 @@ technologies. I’m looking for a position where I can progress and challenge my
 skills. I live in Beer Yaakov, Israel.
 
 <ImageWrapper>
-  <Img fluid={props.data.skills.childImageSharp.fluid} />
+  <Img fadeIn={false} fluid={props.data.skills.childImageSharp.fluid} />
 </ImageWrapper>
 
 ## My skills
@@ -76,7 +76,7 @@ skills. I live in Beer Yaakov, Israel.
   <li>Next.js </li>
 </ul>
 <ImageWrapper>
-  <Img fluid={props.data.forFun.childImageSharp.fluid} />
+  <Img fadeIn={false} fluid={props.data.forFun.childImageSharp.fluid} />
 </ImageWrapper>
 
 ## What I do for fun
