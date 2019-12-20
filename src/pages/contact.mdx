@@ -1,0 +1,22 @@
+import ImageWrapper from "../components/image-wrapper"
+import ContactLinks from "../components/contact-links"
+import { graphql } from "gatsby"
+import Img from "gatsby-image"
+
+export const pageQuery = graphql`
+  {
+    contactMe: file(relativePath: { eq: "images/contact-me.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
+
+<ImageWrapper>
+  <Img fluid={props.data.contactMe.childImageSharp.fluid} />
+</ImageWrapper>
+<h1 style={{textAlign: 'center', margin: '2rem auto'}}>How to get in touch</h1>
+<ContactLinks />

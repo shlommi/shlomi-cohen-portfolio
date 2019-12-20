@@ -1,13 +1,14 @@
 import React from "react"
 import styled from "styled-components"
+import { Link } from "gatsby"
 import { green, dark_green, font_black } from "../theme/_variables"
 
-const Button = ({ text }) => {
-  return <ButtonWrapper>{text}</ButtonWrapper>
+const Button = ({ text, pageUrl }) => {
+  return <ButtonWrapper to={pageUrl}>{text}</ButtonWrapper>
 }
 export default Button
 
-const ButtonWrapper = styled.button`
+const ButtonWrapper = styled(Link)`
   align-items: flex-start;
   background-color: ${green};
   border: 1px solid #ffffff;
@@ -25,6 +26,7 @@ const ButtonWrapper = styled.button`
   text-align: center;
   max-width: 300px;
   width: 300px;
+  text-decoration: none;
   padding: 0.125rem 0.5rem 0.125rem 0.5rem;
   width: 100%;
   transition: background-color 150ms linear;

@@ -6,15 +6,9 @@ import facebook from "../images/facebook-fill.svg"
 import styled from "styled-components"
 import { font_black } from "../theme/_variables"
 
-import Button from "../components/button"
-
-const TitleHeader = () => {
+const ContactLinks = () => {
   return (
     <TitleWrapper>
-      <NameWarpper>
-        <h1>Shlomi Cohen</h1>
-        <h2>Frontend Developer</h2>
-      </NameWarpper>
       <IconsWrapper>
         <a
           href="https://wa.me/972504215503?text=שלום%20שלומי,%20יצרתי%20קשר%20באמצעות%20האתר%20"
@@ -45,12 +39,14 @@ const TitleHeader = () => {
           <img src={facebook} alt="facebook" />
         </a>
       </IconsWrapper>
-      <Button pageUrl="/projects" text="SEE MY PROJECTS" />
+      <NameWarpper>
+        <h4>shlommi@gmail.com</h4>
+      </NameWarpper>
     </TitleWrapper>
   )
 }
 
-export default TitleHeader
+export default ContactLinks
 
 const TitleWrapper = styled.div`
   @media (max-width: 959px) {
@@ -92,15 +88,14 @@ const IconsWrapper = styled.div`
   align-items: center;
   width: 100%;
   max-width: 400px;
-  margin-top: 0.75rem;
-  img {
+  a img {
     margin: 0.5rem;
     max-width: 40px;
     width: 60px;
   }
 
   @media (min-width: 960px) {
-    img {
+    a img {
       margin: 0.75rem;
       max-width: 40px;
       width: 60px;
@@ -109,6 +104,7 @@ const IconsWrapper = styled.div`
 `
 
 const NameWarpper = styled.div`
+  margin: 1rem auto;
   width: 100%;
   max-width: 420px;
 `

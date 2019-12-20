@@ -1,0 +1,21 @@
+import ImageWrapper from "../components/image-wrapper"
+import { graphql } from "gatsby"
+import Img from "gatsby-image"
+
+export const pageQuery = graphql`
+  {
+    soon: file(relativePath: { eq: "images/soon.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 500) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
+
+<ImageWrapper>
+  <Img fluid={props.data.soon.childImageSharp.fluid} />
+</ImageWrapper>
+
+## soon...

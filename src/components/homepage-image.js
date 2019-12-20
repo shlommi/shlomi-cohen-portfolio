@@ -30,15 +30,12 @@ export default HelloWorldImage
 
 const ImageWrapper = styled.div`
   display: block;
-  max-width: 400px;
-  max-height: 500px;
+  max-width: 350px;
+  max-height: 450px;
   @media (max-width: 599px) {
     margin: 0 auto 2rem auto;
   }
   @media (min-width: 600px) {
-    /* -webkit-box-align: center;
-    justify-content: center;
-    align-items: center; */
     text-align: center;
     margin: 4rem auto 1rem auto;
   }

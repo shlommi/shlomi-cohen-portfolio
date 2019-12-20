@@ -8,24 +8,24 @@ import Img from "gatsby-image"
 
 export const pageQuery = graphql`
   {
-    whatIDo: file(relativePath: { eq: "what-i-do.png" }) {
+    whatIDo: file(relativePath: { eq: "images/what-i-do.png" }) {
       childImageSharp {
-        fixed(width: 288, quality: 100) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 500) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
-    skills: file(relativePath: { eq: "my-skills.png" }) {
+    skills: file(relativePath: { eq: "images/my-skills.png" }) {
       childImageSharp {
-        fixed(quality: 100) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 500) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
-    forFun: file(relativePath: { eq: "what-i-do-for-fun.png" }) {
+    forFun: file(relativePath: { eq: "images/what-i-do-for-fun.png" }) {
       childImageSharp {
-        fixed(quality: 100) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 500) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
@@ -38,7 +38,7 @@ export const pageQuery = graphql`
 <Heading text="I'm Shlomi Cohen." />
 <Subheading text="fed developer · technology addict · occasional designer · father and husband" />
 <ImageWrapper>
-  <Img fixed={props.data.whatIDo.childImageSharp.fixed} />
+  <Img fluid={props.data.whatIDo.childImageSharp.fluid} />
 </ImageWrapper>
 
 ## What I do
@@ -55,7 +55,7 @@ technologies. I’m looking for a position where I can progress and challenge my
 skills. I live in Beer Yaakov, Israel.
 
 <ImageWrapper>
-  <Img fixed={props.data.skills.childImageSharp.fixed} />
+  <Img fluid={props.data.skills.childImageSharp.fluid} />
 </ImageWrapper>
 
 ## My skills
@@ -76,7 +76,7 @@ skills. I live in Beer Yaakov, Israel.
   <li>Next.js </li>
 </ul>
 <ImageWrapper>
-  <Img fixed={props.data.forFun.childImageSharp.fixed} />
+  <Img fluid={props.data.forFun.childImageSharp.fluid} />
 </ImageWrapper>
 
 ## What I do for fun

@@ -1,6 +1,4 @@
 import React from "react"
-// import { useStaticQuery, graphql } from "gatsby"
-// import Img from "gatsby-image"
 import styled from "styled-components"
 
 const ImageWrapper = ({ children }) => {
@@ -10,16 +8,14 @@ const ImageWrapper = ({ children }) => {
 export default ImageWrapper
 
 const Wrapper = styled.div`
-  /* text-align: center;
-  display: block; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
+  display: block;
+  max-width: 400px;
 
   @media (max-width: 599px) {
-    margin: 2rem auto;
+    margin: 3rem auto 5rem auto;
   }
   @media (min-width: 600px) {
-    margin: 8rem auto;
+    margin: 6rem auto;
   }
 `
