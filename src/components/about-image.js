@@ -8,8 +8,8 @@ const AboutImage = () => {
     query {
       file(relativePath: { eq: "shlomi-cohen.png" }) {
         childImageSharp {
-          fluid(maxHeight: 200, maxWidth: 200, quality: 80) {
-            ...GatsbyImageSharpFluid
+          fluid(maxHeight: 200, maxWidth: 200, quality: 100) {
+            ...GatsbyImageSharpFluid_noBase64
           }
         }
       }
@@ -17,10 +17,7 @@ const AboutImage = () => {
   `)
   return (
     <ImageWrapper>
-      <Img
-        fluid={data.file.childImageSharp.fluid}
-        alt="shlomi-cohen"
-      />
+      <Img fluid={data.file.childImageSharp.fluid} alt="shlomi-cohen" />
     </ImageWrapper>
   )
 }
