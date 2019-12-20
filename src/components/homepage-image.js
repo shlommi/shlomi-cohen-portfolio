@@ -17,11 +17,7 @@ const HelloWorldImage = () => {
   `)
   return (
     <ImageWrapper>
-      <Img
-        fadeIn={false}
-        fluid={data.file.childImageSharp.fluid}
-        alt="hello-world"
-      />
+      <Img fluid={data.file.childImageSharp.fluid} alt="hello-world" />
     </ImageWrapper>
   )
 }
