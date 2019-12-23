@@ -24,8 +24,6 @@ const GlobalStyle = createGlobalStyle`
             max-width: 90%;
             min-height: 100%;
             box-sizing: border-box;
-
-        
           }
         
           h1,
@@ -61,6 +59,7 @@ const GlobalStyle = createGlobalStyle`
           p {
             margin-top: 1.25rem;
             line-height:1.55;
+            font-size: 108%;
             color: ${textColor};
          }
 

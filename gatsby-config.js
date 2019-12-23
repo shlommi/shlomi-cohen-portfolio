@@ -21,28 +21,29 @@ module.exports = {
         defaultLayouts: {
           default: require.resolve("./src/components/layout/layout.js"),
         },
-        gatsbyRemarkPlugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 1200,
-            },
-          },
-        ],
+        gatsbyRemarkPlugins: [{ resolve: "gatsby-remark-images" }],
+        plugins: [{ resolve: "gatsby-remark-images" }],
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "projects",
+        path: `${__dirname}/src/projects`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `markdown-pages`,
-        path: `./src/pages`,
+        path: `${__dirname}/src/pages`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `./src/images`,
+        path: `${__dirname}/src/images`,
       },
     },
     `gatsby-transformer-sharp`,

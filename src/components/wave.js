@@ -1,10 +1,33 @@
 import React, { useState } from "react"
+import styled from "styled-components"
+import { font_black, dark_green } from "../theme/_variables"
 
 const Wave = () => {
   const [waves, setWaves] = useState(0)
   const label = `👋 ${waves} ${waves === 1 ? "wave" : "waves"}`
 
-  return <button onClick={() => setWaves(waves + 1)}>{label}</button>
+  return (
+    <Wrapper>
+      <button onClick={() => setWaves(waves + 1)}>{label}</button>
+    </Wrapper>
+  )
 }
 
 export default Wave
+
+const Wrapper = styled.div`
+  display: block;
+  text-align: center;
+  margin: 0 auto 6rem auto;
+  width: 100%;
+  max-width: 400px;
+
+  button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 2rem;
+    color: ${dark_green};
+    font-family: ${font_black};
+  }
+`
