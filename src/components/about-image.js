@@ -28,12 +28,12 @@ const ImageWrapper = styled.div`
   display: block;
   max-width: 200px;
   @media (max-width: 599px) {
-    margin: 15vh auto 2rem auto;
+    margin: 10vh auto 2rem auto;
     max-width: 200px;
   }
   @media (min-width: 600px) {
     text-align: center;
-    max-width: 300px;
+    max-width: 280px;
     margin: 8rem auto 1rem auto;
   }
 `

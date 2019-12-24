@@ -14,5 +14,6 @@ const H2 = styled.h2`
   font-size: 82%;
   text-align: center;
   margin-top: 0.55rem;
+  margin-bottom: 4rem;
   font-weight: 300;
 `

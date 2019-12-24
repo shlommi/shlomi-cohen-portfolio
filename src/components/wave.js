@@ -26,8 +26,15 @@ const Wrapper = styled.div`
     background-color: transparent;
     border: none;
     outline: none;
-    font-size: 2rem;
+    font-size: 1.2rem;
     color: ${dark_green};
     font-family: ${font_black};
+    transition: all 150ms ease-in-out;
+
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 `

@@ -1,5 +1,7 @@
 import React from "react"
 import Helmet from "react-helmet"
+import styled from "styled-components"
+import { green } from "../theme/_variables"
 import { graphql, Link } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "../components/layout/layout"
@@ -24,10 +26,24 @@ const ProjectTemplate = ({ data }) => (
     </Helmet>
     <h1>{data.mdx.frontmatter.title}</h1>
     <MDXRenderer>{data.mdx.body}</MDXRenderer>
-    <p>
-      <Link to="/projects">&larr; back to all Projects</Link>
-    </p>
+    <AllProjectLink>
+      <Link to="/projects"> ‹ back to all Projects</Link>
+    </AllProjectLink>
   </Layout>
 )
 
 export default ProjectTemplate
+
+const AllProjectLink = styled.p`
+  a {
+    color: ${green};
+    display: block;
+    padding: 0 0.15rem;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+    text-align: left;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+`

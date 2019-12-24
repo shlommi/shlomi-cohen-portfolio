@@ -16,7 +16,7 @@ const Wrapper = styled.div`
     max-width: 280px;
   }
   @media (min-width: 600px) {
-    max-width: 300px;
+    max-width: 400px;
     margin: 6rem auto;
   }
 `

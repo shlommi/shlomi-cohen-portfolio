@@ -5,7 +5,6 @@ module.exports = {
     author: `shlomi cohen`,
   },
   plugins: [
-    `gatsby-transformer-remark`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     {
@@ -21,8 +20,24 @@ module.exports = {
         defaultLayouts: {
           default: require.resolve("./src/components/layout/layout.js"),
         },
-        gatsbyRemarkPlugins: [{ resolve: "gatsby-remark-images" }],
-        plugins: [{ resolve: "gatsby-remark-images" }],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: "gatsby-remark-images",
+            options: {
+              maxWidth: 750,
+              linkImagesToOriginal: false,
+            },
+          },
+        ],
+        plugins: [
+          {
+            resolve: "gatsby-remark-images",
+            options: {
+              maxWidth: 750,
+              linkImagesToOriginal: false,
+            },
+          },
+        ],
       },
     },
     {
@@ -48,6 +63,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
