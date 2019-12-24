@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import Layout from "../components/layout/layout"
 import useProjects from "../hooks/use-projects"
 import Never from "../components/never"
-import Wave from "../components/Wave"
+import Wave from "../components/wave"
 
 export default () => {
   const projects = useProjects()
