@@ -12,6 +12,6 @@ const H1 = styled.h1`
   font-weight: 900;
   line-height: 1;
   text-align: center;
-  margin: 0.5rem 0px 0.25rem;
+  margin: 1.8rem 0px 0.25rem;
   font-family: ${font_black};
 `

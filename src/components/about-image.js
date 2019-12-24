@@ -8,7 +8,7 @@ const AboutImage = () => {
     query {
       file(relativePath: { eq: "shlomi-cohen.png" }) {
         childImageSharp {
-          fluid(maxHeight: 200, maxWidth: 200, quality: 100) {
+          fluid(maxHeight: 500, maxWidth: 500, quality: 100) {
             ...GatsbyImageSharpFluid_noBase64
           }
         }
@@ -27,14 +27,13 @@ export default AboutImage
 const ImageWrapper = styled.div`
   display: block;
   max-width: 200px;
-  max-height: 200px;
   @media (max-width: 599px) {
     margin: 15vh auto 2rem auto;
-    max-width: 160px;
-    max-height: 160px;
+    max-width: 200px;
   }
   @media (min-width: 600px) {
     text-align: center;
+    max-width: 300px;
     margin: 8rem auto 1rem auto;
   }
 `

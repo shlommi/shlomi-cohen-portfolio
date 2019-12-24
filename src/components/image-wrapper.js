@@ -10,12 +10,13 @@ export default ImageWrapper
 const Wrapper = styled.div`
   text-align: center;
   display: block;
-  max-width: 400px;
 
   @media (max-width: 599px) {
     margin: 3rem auto 5rem auto;
+    max-width: 200px;
   }
   @media (min-width: 600px) {
+    max-width: 300px;
     margin: 6rem auto;
   }
 `
