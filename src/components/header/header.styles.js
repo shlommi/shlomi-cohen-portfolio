@@ -108,7 +108,7 @@ export const NavItem = styled(Link)`
       img {
         position: absolute;
         top: -8px;
-        left: -8px;
+        left: -7px;
       }
     }
   }
@@ -118,7 +118,7 @@ export const NavItem = styled(Link)`
       margin: 0px 0.2rem 0px 0px;
       img {
         position: absolute;
-        top: -8px;
+        top: -7px;
         left: -8px;
       }
     }
