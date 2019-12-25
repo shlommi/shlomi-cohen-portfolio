@@ -8,6 +8,7 @@ const HeadingProject = ({ children }) => {
 
 export default HeadingProject
 const H2 = styled.h2`
+  margin-top: 3rem;
   a {
     color: inherit;
     text-decoration: none;

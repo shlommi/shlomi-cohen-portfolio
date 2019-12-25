@@ -24,6 +24,10 @@ const Wrapper = styled.div`
   max-width: 400px;
   padding: 2rem 4rem;
 
+  @media (max-width: 599px) {
+    padding: 0 4rem;
+  }
+
   h1 {
     margin-top: 0;
     line-height: 1.5;

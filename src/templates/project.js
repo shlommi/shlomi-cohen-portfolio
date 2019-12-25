@@ -39,6 +39,7 @@ const AllProjectLink = styled.p`
     color: ${green};
     display: block;
     padding: 0 0.15rem;
+    margin-top: 2rem;
     font-size: 0.85rem;
     letter-spacing: 0.05em;
     font-weight: 600;

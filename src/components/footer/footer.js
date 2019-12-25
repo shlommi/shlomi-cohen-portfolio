@@ -16,7 +16,7 @@ function Footer() {
         <FooterNav>
           <FooterNavItem to="/">Home</FooterNavItem>
           <FooterNavItem to="/about">About</FooterNavItem>
-          <FooterNavItem to="/projects">Project</FooterNavItem>
+          <FooterNavItem to="/projects">Projects</FooterNavItem>
           <FooterNavItem to="/blog">Blog</FooterNavItem>
           <FooterNavItem to="/contact">Contact</FooterNavItem>
         </FooterNav>

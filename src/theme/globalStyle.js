@@ -6,6 +6,7 @@ import {
   font_black,
   font_regular,
   textColor,
+  green,
 } from "./_variables"
 
 const GlobalStyle = createGlobalStyle`
@@ -71,6 +72,10 @@ const GlobalStyle = createGlobalStyle`
 
           li {
             margin-top: 0.25rem;
+          }
+
+          a {
+            color: ${green};
           }
 `
 

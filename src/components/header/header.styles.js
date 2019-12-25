@@ -35,7 +35,7 @@ export const HeaderWrapper = styled.header`
       position: absolute;
       background-color: ${green};
       right: -15px;
-      top: 34px;
+      top: 33px;
       height: 1px;
       width: calc(100% - 15px);
       z-index: 1;
@@ -48,7 +48,7 @@ export const HeaderWrapper = styled.header`
       position: absolute;
       background-color: ${green};
       right: 0px;
-      top: 36px;
+      top: 34.5px;
       height: 1px;
       width: calc(100% - 29px);
       z-index: 1;

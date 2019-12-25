@@ -57,5 +57,6 @@ const ReadMoreWrapper = styled.p`
 `
 const Article = styled.article`
   padding-bottom: 1.25rem;
+  margin-top: 2rem;
   border-bottom: 1px solid rgba(26, 41, 37, 0.2);
 `
