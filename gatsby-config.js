@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Shlomi Cohen portfilo`,
-    description: `Shlomi Cohen Frontend developer react developer web developer`,
-    author: `shlomi cohen`,
+    title: `Shlomi Cohen portfilo  site`,
+    description: `Shlomi Cohen Frontend web developer introducing skills`,
+    author: `Shlomi Cohen`,
   },
   plugins: [
     `gatsby-plugin-styled-components`,

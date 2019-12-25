@@ -1,10 +1,10 @@
 import React from "react"
-import Helmet from "react-helmet"
 import styled from "styled-components"
 import { green } from "../theme/_variables"
 import { graphql, Link } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "../components/layout/layout"
+import SEO from "../components/seo"
 
 export const query = graphql`
   query($slug: String!) {
@@ -20,10 +20,7 @@ export const query = graphql`
 
 const ProjectTemplate = ({ data }) => (
   <Layout>
-    <Helmet>
-      <title>{data.mdx.frontmatter.title}</title>
-      <meta name="description" content={data.mdx.excerpt} />
-    </Helmet>
+    <SEO title={data.mdx.frontmatter.title} description={data.mdx.excerpt} />
     <h1>{data.mdx.frontmatter.title}</h1>
     <MDXRenderer>{data.mdx.body}</MDXRenderer>
     <AllProjectLink>

@@ -7,12 +7,17 @@ import Never from "../components/never"
 import Wave from "../components/wave"
 import HeadingProject from "../components/heading-project"
 import { green, white_green } from "../theme/_variables"
+import SEO from "../components/seo"
 
 export default () => {
   const projects = useProjects()
 
   return (
     <Layout>
+      <SEO
+        title="Projects"
+        keywords={["shlomi cohen", "applications", "react.js", "gatsby.js"]}
+      />
       <Never />
       <Wave />
       <h3>The Latest from the Projects</h3>
